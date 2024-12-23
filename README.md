@@ -1,12 +1,10 @@
-This repository contains a README file sample for Daytona Samples and the MIT License.
+# Calendar App with Daytona  
 
-It can be used as a template to create sample repositories that can be added into [Daytona](https://github.com/daytonaio/daytona).
+This repository contains a sample project demonstrating the integration of Daytona for managing a seamless development environment.  
 
-Once you finish your sample and it gets merged, you can open a PR in the Daytona repo and submit the sample into the [index file](https://github.com/daytonaio/daytona/blob/main/hack/samples/index.json).
+It can be used as a template to create sample repositories that can be added to [Daytona](https://github.com/daytonaio/daytona).  
 
-# Sample <LANGUAGE/FRAMEWORK>
-
-Sample description
+Once you finish your sample and it gets merged, you can open a PR in the Daytona repo and submit the sample to the [index file](https://github.com/daytonaio/daytona/blob/main/hack/samples/index.json).  
 
 ---
 
@@ -17,18 +15,25 @@ Sample description
 1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
 2. **Create the Workspace**:  
    ```bash  
-   daytona create <SAMPLE_REPO_URL> 
-   ```  
+   daytona create https://github.com/daytonaio/sample-react-calendar-app
+3. **Open the Project**: Open the project in a development container (VSCode will prompt you).
+4. **Install Dependencies:**
+   ```
+   npm install
 
-... MORE STEPS IF NEEDED ...
-
-4. **Start the Application**:  
+5. **Start the Application**:  
    ```bash  
-   command to start the app
+   npm run dev
    ```  
 
 ---
 
 ## ✨ Features  
 
-List of sample features (e.g. realtime chat app, standardized development environment with devcontainers)
+The Calendar App is a React-based single-page application with the following features:
+
+1. Calendar Navigation: Navigate through months seamlessly.
+2. Event Scheduling: Add and manage events with time validation.
+3. Categorization: Categorize events into Work, Personal, Others, etc.
+4. Real-time Updates: Automatically updates the event list upon changes.
+5. Customizable Events: Edit event details and customize categories.
