@@ -1,30 +1,26 @@
 {
-  "name": "Vite + React",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm", // Node.js & TypeScript container
-
+  "name": "React Vite Dev Container",
+  "image": "node:20",
+  "forwardPorts": [5173],
+  "postCreateCommand": "npm install",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode-remote.remote-containers",  // For remote container support
-        "dbaeumer.vscode-eslint",  // ESLint for React code linting
-        "esbenp.prettier-vscode",  // Prettier for code formatting
-        "ms-vscode.vscode-typescript-next",  // TypeScript support
-        "HookyQR.beautify"  // Beautify code formatting (optional, depends on preference)
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
       ]
     }
   },
-
-  // Add Node.js to the container (for Vite and React)
-  "features": {
-    "node": "latest"  // Add latest Node.js version for Vite and React
+  "settings": {
+    "editor.formatOnSave": true
   },
-
-  // Forward port 5173 to access the Vite dev server from the browser
-  "forwardPorts": [5173],
-
-  // Post-create command to install dependencies automatically
-  "postCreateCommand": "npm install",  // Run npm install after container setup
-
-  // Use the default VS Code user
-  "remoteUser": "vscode"
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "remoteEnv": {
+    "NODE_ENV": "development"
+  }
 }
